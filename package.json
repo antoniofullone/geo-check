@@ -1,5 +1,5 @@
 {
-  "name": "geo-checker",
+  "name": "geo-check",
   "version": "1.0.0",
   "description": "AI Visibility Scanner — Check your site's GEO readiness and AI bot access in one command",
   "type": "module",
@@ -21,6 +21,7 @@
   },
   "files": [
     "dist",
+    "demo/demo.gif",
     "SKILL.md",
     "README.md",
     "LICENSE"
@@ -54,10 +55,10 @@
   "homepage": "https://www.summalytics.ai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antoniofullone/geo-checker.git"
+    "url": "git+https://github.com/antoniofullone/geo-check.git"
   },
   "bugs": {
-    "url": "https://github.com/antoniofullone/geo-checker/issues"
+    "url": "https://github.com/antoniofullone/geo-check/issues"
   },
   "dependencies": {
     "chalk": "^5.4.1",

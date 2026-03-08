@@ -2,13 +2,13 @@
 
 AI Visibility Scanner for websites: detect AI crawler access via `robots.txt` and compute a GEO (Generative Engine Optimization) readiness score.
 
-[![npm version](https://img.shields.io/npm/v/geo-check.svg)](https://www.npmjs.com/package/geo-check)
+[![npm](https://img.shields.io/badge/npm-coming%20soon-orange)](https://www.npmjs.com/package/geo-check)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/antoniofullone/geo-check?style=social)](https://github.com/antoniofullone/geo-check)
+[![GitHub](https://img.shields.io/badge/github-repo%20coming%20soon-lightgrey)](https://github.com/antoniofullone/geo-check)
 
 ## Demo GIF
 
-![geo-check demo](https://raw.githubusercontent.com/antoniofullone/geo-check/main/docs/demo.gif)
+![geo-check demo](./demo/demo.gif)
 
 Record/update demo with VHS using [`demo/vhs.tape`](./demo/vhs.tape).
 

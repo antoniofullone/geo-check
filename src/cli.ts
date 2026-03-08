@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { Command, CommanderError } from "commander";
+import { realpathSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { geoCheckMany } from "./index.js";
 import { formatJsonOutput } from "./reporters/json.js";
@@ -77,9 +78,21 @@ export async function runCli(argv = process.argv, io: CliIO = defaultIO): Promis
   return results.some((result) => result.success) ? 0 : 1;
 }
 
-const directInvocation = process.argv[1]
-  ? import.meta.url === pathToFileURL(process.argv[1]).href
-  : false;
+function isDirectInvocation(): boolean {
+  if (!process.argv[1]) {
+    return false;
+  }
+
+  try {
+    const invoked = realpathSync(process.argv[1]);
+    const current = realpathSync(new URL(import.meta.url));
+    return invoked === current;
+  } catch {
+    return import.meta.url === pathToFileURL(process.argv[1]).href;
+  }
+}
+
+const directInvocation = isDirectInvocation();
 
 if (directInvocation) {
   runCli().then((code) => {
