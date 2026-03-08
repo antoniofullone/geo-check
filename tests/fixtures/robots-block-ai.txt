@@ -1,0 +1,12 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+Allow: /public
+
+User-agent: *
+Allow: /
+Disallow: /private
+
+Sitemap: https://example.com/sitemap.xml

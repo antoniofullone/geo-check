@@ -1,0 +1,75 @@
+{
+  "name": "geo-checker",
+  "version": "1.0.0",
+  "description": "AI Visibility Scanner — Check your site's GEO readiness and AI bot access in one command",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./bots": {
+      "types": "./dist/data/ai-bots.d.ts",
+      "import": "./dist/data/ai-bots.js"
+    }
+  },
+  "bin": {
+    "geo-check": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "geo",
+    "generative-engine-optimization",
+    "ai-seo",
+    "ai-crawler",
+    "robots-txt",
+    "ai-visibility",
+    "seo",
+    "chatgpt",
+    "perplexity",
+    "claude",
+    "ai-search"
+  ],
+  "author": "Antonio",
+  "license": "MIT",
+  "homepage": "https://www.summalytics.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniofullone/geo-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antoniofullone/geo-checker/issues"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cheerio": "^1.1.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
